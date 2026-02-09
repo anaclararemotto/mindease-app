@@ -1,7 +1,8 @@
 
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { LandingView } from "./screens/Landing/landing.view";
 import { Text, View } from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { ThemeProvider } from "../shared/theme/ThemeContext";
+import { LandingView } from "./screens/Landing/landing.view";
 
 
 export default function Index() {
@@ -9,15 +10,7 @@ export default function Index() {
     <ThemeProvider>
        <SafeAreaProvider>
       <SafeAreaView style={{flex: 1}}>
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text>Edit app/index.tsx to edit this screen.</Text>
-      </View>
+      <LandingView/>
        </SafeAreaView>
     </SafeAreaProvider>
     </ThemeProvider>
