@@ -34,7 +34,7 @@ A proposta central é transformar o estudo em uma experiência mais leve, organi
 - SCSS
 - Lucide Icons
 - Design System próprio
-- Consome a MindEase API
+- Firebase
 
 ## 🔐 Autenticação
 -
@@ -47,7 +47,7 @@ A proposta central é transformar o estudo em uma experiência mais leve, organi
 
 ```
 npm install
-npm run dev
+npm start
 ```
 
 
