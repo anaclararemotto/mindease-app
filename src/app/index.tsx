@@ -8,5 +8,6 @@ export default function Index() {
         
       </SafeAreaView>
     </SafeAreaProvider>
+
   );
 }
