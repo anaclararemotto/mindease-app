@@ -8,7 +8,7 @@ export const typography = {
   bodylg: { fontSize: 16, fontWeight: 400 as const},
   bodymd: { fontSize: 14, fontWeight: 400 as const},
   bodysm: { fontSize: 12, fontWeight: 400 as const},
-  button: { fontSize: 16, fontWeight: 500 as const},
+  button: { fontSize: 16, fontWeight: 400 as const},
 };
 
 export type Typography = typeof typography;

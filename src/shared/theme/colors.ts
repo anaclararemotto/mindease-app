@@ -4,17 +4,17 @@ export type Colors = {
   backgroundCard: string;
   colorPrimary: string;
   colorSecondary: string;
-  placeholder:string;
+  placeholder: string;
   red: string;
   green: string;
   yellow: string;
+  white: string;
 };
-
 
 //PURPLE
-export const lightPurple : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightPurple: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#4966CC",
   colorSecondary: "#E6ECFF",
@@ -22,11 +22,12 @@ export const lightPurple : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkPurple : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkPurple: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#4966CC",
   colorSecondary: "#E6ECFF",
@@ -34,12 +35,13 @@ export const darkPurple : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 //OBSIDIAN
-export const lightObsidian : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightObsidian: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#5C26FF",
   colorSecondary: "#B69DFF",
@@ -47,11 +49,12 @@ export const lightObsidian : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkObsidian : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkObsidian: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#4E20D9",
   colorSecondary: "#B69DFF",
@@ -59,14 +62,13 @@ export const darkObsidian : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
-
 
 //VIOLET
-export const lightViolet : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightViolet: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#9776DA",
   colorSecondary: "#D0C1EE",
@@ -74,11 +76,12 @@ export const lightViolet : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkViolet : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkViolet: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#9776DA",
   colorSecondary: "#D0C1EE",
@@ -86,14 +89,13 @@ export const darkViolet : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
-
 
 //RED
-export const lightRed : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightRed: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#890101",
   colorSecondary: "#CA8D8D",
@@ -101,11 +103,12 @@ export const lightRed : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkRed : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkRed: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#B25A5A",
   colorSecondary: "#CA8D8D",
@@ -113,14 +116,13 @@ export const darkRed : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
-
 
 //ORANGE
-export const lightOrange : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightOrange: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#E35204",
   colorSecondary: "#F2B18E",
@@ -128,11 +130,12 @@ export const lightOrange : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkOrange : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkOrange: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#E35204",
   colorSecondary: "#F2B18E",
@@ -140,14 +143,13 @@ export const darkOrange : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
-
 
 //TANGER
-export const lightTanger : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightTanger: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#EA9306",
   colorSecondary: "#E9EBF8",
@@ -155,11 +157,12 @@ export const lightTanger : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkTanger : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkTanger: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#EA9306",
   colorSecondary: "#E9EBF8",
@@ -167,14 +170,13 @@ export const darkTanger : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
-
 
 //YELLOW
-export const lightYellow : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightYellow: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#D8B262",
   colorSecondary: "#EDDCB8",
@@ -182,11 +184,12 @@ export const lightYellow : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkYellow : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkYellow: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#D8B262",
   colorSecondary: "#EDDCB8",
@@ -194,14 +197,13 @@ export const darkYellow : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
-
 
 //BROWN
-export const lightBrown : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightBrown: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#582B13",
   colorSecondary: "#B4A095",
@@ -209,11 +211,12 @@ export const lightBrown : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkBrown : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkBrown: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#927566",
   colorSecondary: "#B4A095",
@@ -221,13 +224,13 @@ export const darkBrown : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
 
 //CHOCOLATE
-export const lightChocolate : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightChocolate: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#68432F",
   colorSecondary: "#BBAAA1",
@@ -235,11 +238,12 @@ export const lightChocolate : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkChocolate : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkChocolate: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#68432F",
   colorSecondary: "#BBAAA1",
@@ -247,13 +251,13 @@ export const darkChocolate : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
 
 //CINNAMON
-export const lightCinnamon : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightCinnamon: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#893B0A",
   colorSecondary: "#CAA791",
@@ -261,11 +265,12 @@ export const lightCinnamon : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkCinnamon : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkCinnamon: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#B28060",
   colorSecondary: "#CAA791",
@@ -273,13 +278,13 @@ export const darkCinnamon : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-
 //QUARTZ
-export const lightQuartz : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightQuartz: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#A5126B",
   colorSecondary: "#D794BC",
@@ -287,11 +292,12 @@ export const lightQuartz : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkQuartz : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkQuartz: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#C5659F",
   colorSecondary: "#D794BC",
@@ -299,13 +305,13 @@ export const darkQuartz : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
 
 //BLUSH
-export const lightBlush : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightBlush: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#D776B0",
   colorSecondary: "#EDC1DB",
@@ -313,11 +319,12 @@ export const lightBlush : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkBlush : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkBlush: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#D776B0",
   colorSecondary: "#EDC1DB",
@@ -325,13 +332,13 @@ export const darkBlush : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
 
 //PEONY
-export const lightPeony : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightPeony: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#CF3B94",
   colorSecondary: "#E9A7CF",
@@ -339,11 +346,12 @@ export const lightPeony : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-export const darkPeony : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const darkPeony: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#CF3B94",
   colorSecondary: "#E9A7CF",
@@ -351,13 +359,13 @@ export const darkPeony : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
-
 
 //BLUESKY
-export const lightBlueSky : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightBlueSky: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#006ACD",
   colorSecondary: "#8CBCE9",
@@ -365,11 +373,12 @@ export const lightBlueSky : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 export const darkBlueSky: Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#599EDF",
   colorSecondary: "#8CBCE9",
@@ -377,13 +386,13 @@ export const darkBlueSky: Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-
 //COBALT
-export const lightCobalt : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightCobalt: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#062E93",
   colorSecondary: "#8FA5DA",
@@ -391,11 +400,12 @@ export const lightCobalt : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 export const darkCobalt: Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#0736AD",
   colorSecondary: "#8FA5DA",
@@ -403,14 +413,13 @@ export const darkCobalt: Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-
-
 //POLAR
-export const lightPolar : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightPolar: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#3BAFCF",
   colorSecondary: "#A7DBE9",
@@ -418,11 +427,12 @@ export const lightPolar : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 export const darkPolar: Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#3BAFCF",
   colorSecondary: "#A7DBE9",
@@ -430,15 +440,13 @@ export const darkPolar: Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-
-
-
 //CIAN
-export const lightCian : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightCian: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#3BCFB1",
   colorSecondary: "#A7E9DC",
@@ -446,11 +454,12 @@ export const lightCian : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 export const darkCian: Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#3BCFB1",
   colorSecondary: "#A7E9DC",
@@ -458,14 +467,13 @@ export const darkCian: Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-
-
 //GREEN
-export const lightGreen : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightGreen: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#499C45",
   colorSecondary: "#ADD2AB",
@@ -473,11 +481,12 @@ export const lightGreen : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 export const darkGreen: Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#",
   colorSecondary: "#93AC8E",
@@ -485,13 +494,13 @@ export const darkGreen: Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
-
 //FOREST
-export const lightForest : Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+export const lightForest: Colors = {
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#63875C",
   colorSecondary: "#93AC8E",
@@ -499,11 +508,12 @@ export const lightForest : Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };
 
 export const darkForest: Colors = {
-  background: '#ffffff',
-  backgroundSecondary: '#EEEEEE',
+  background: "#ffffff",
+  backgroundSecondary: "#EEEEEE",
   backgroundCard: "#DCDCDC",
   colorPrimary: "#499C45",
   colorSecondary: "#ADD2AB",
@@ -511,4 +521,5 @@ export const darkForest: Colors = {
   red: "#CB0101",
   green: "#03A201",
   yellow: "#ECE404",
+  white: "#FFFFFF",
 };

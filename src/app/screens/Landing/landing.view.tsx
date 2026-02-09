@@ -1,7 +1,8 @@
-import { Image, Text, View } from "react-native";
 import LandingLight from "@/assets/images/landing-light.svg";
-import { Button } from "../../components/Button/button";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
+import { MoveRight } from "lucide-react";
+import { Image, Text, View } from "react-native";
+import { Button } from "../../components/Button/button";
 import { landingStyles } from "./landing.styles";
 
 export const LandingView = () => {
@@ -25,7 +26,7 @@ export const LandingView = () => {
         </Text>
         <Text style={styles.wellcome}>Bem vindo ao MindEase!</Text>
       </View>
-      <Button title="Começar" />
+      <Button showIcon icon={MoveRight} title="Começar" iconPosition="right" />
     </View>
   );
 };
