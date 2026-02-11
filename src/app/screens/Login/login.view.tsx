@@ -13,26 +13,26 @@ export const LoginView = () => {
   return (
     <View style={styles.container}>
       <Link href={'/'}>
-      <ChevronLeft color={colors.colorPrimary}/></Link>
-      <View style={styles.containerTitle}>
-        <Text style={styles.title}>Entre com sua conta</Text>
-        <Text style={styles.subtitle}>Bem vindo de volta!</Text>
-      </View>
-
+        <ChevronLeft color={colors.colorPrimary} /></Link>
       <View style={styles.containerContent}>
-        <View style={styles.inputContainer}>
-        <Input placeholder="Digite seu email" type="email"></Input>
-        <Input placeholder="Digite sua senha" type="password"></Input>
-      </View>
-      <Button title="Cadastrar" />
+        <View style={styles.containerTitle}>
+          <Text style={styles.title}>Entre com sua conta</Text>
+          <Text style={styles.subtitle}>Bem vindo de volta!</Text>
+        </View>
 
-<View style={styles.linkContainer}>
-  <Link href={'/'} style={styles.link}>Esqueci minha senha</Link>
-      <Text style={styles.text}>Ainda não possui uma conta? <Link href={'/screens/Signup'} style={styles.link}>Cadastre-se</Link></Text>
-      
-</View>
+        <View style={styles.inputContainer}>
+          <Input placeholder="Digite seu email" type="email"></Input>
+          <Input placeholder="Digite sua senha" type="password"></Input>
+        </View>
+        <Button title="Cadastrar" />
+
+        <View style={styles.linkContainer}>
+          <Link href={'/'} style={styles.link}>Esqueci minha senha</Link>
+          <Text style={styles.text}>Ainda não possui uma conta? <Link href={'/screens/Signup'} style={styles.link}>Cadastre-se</Link></Text>
+
+        </View>
       </View>
-      
+
     </View>
   );
 };
