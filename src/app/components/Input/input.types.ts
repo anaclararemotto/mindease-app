@@ -1,7 +1,7 @@
 import { TextStyle } from 'react-native';
 
 export type InputProps = {
-  type: 'text' | 'password' | 'email' | 'confirmPassword';
+  type: 'text' | 'password' | 'email' | 'confirmPassword'| "date";
   label?: string;
   placeholder: string;
   value?: string;

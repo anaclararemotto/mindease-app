@@ -2,7 +2,7 @@ import { Colors } from "@/src/shared/theme/colors";
 import { typography } from "@/src/shared/theme/typography";
 import { StyleSheet } from "react-native";
 
-export const loginStyles = (colors: Colors) =>
+export const signupStyles = (colors: Colors) =>
   StyleSheet.create({
     container:{
       backgroundColor: colors.background,

@@ -23,6 +23,7 @@ export default function Layout() {
     >
       <Stack.Screen name="index" />
       <Stack.Screen name="screens/Login/index" />
+      <Stack.Screen name="screens/Signup/index" />
     </Stack>
   );
 }
