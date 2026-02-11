@@ -20,6 +20,9 @@ export default function Layout() {
       screenOptions={{
         headerShown: false,
       }}
-    />
+    >
+      <Stack.Screen name="index" />
+      <Stack.Screen name="screens/Login/index" />
+    </Stack>
   );
 }

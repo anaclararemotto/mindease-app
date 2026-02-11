@@ -9,6 +9,7 @@ export type Colors = {
   green: string;
   yellow: string;
   white: string;
+  textColor: string;
 };
 
 //PURPLE
@@ -23,12 +24,13 @@ export const lightPurple: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkPurple: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#4966CC",
   colorSecondary: "#E6ECFF",
   placeholder: "#8F8F8F",
@@ -36,6 +38,7 @@ export const darkPurple: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //OBSIDIAN
@@ -50,12 +53,13 @@ export const lightObsidian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkObsidian: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#4E20D9",
   colorSecondary: "#B69DFF",
   placeholder: "#8F8F8F",
@@ -63,6 +67,7 @@ export const darkObsidian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //VIOLET
@@ -77,12 +82,13 @@ export const lightViolet: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkViolet: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#9776DA",
   colorSecondary: "#D0C1EE",
   placeholder: "#8F8F8F",
@@ -90,6 +96,7 @@ export const darkViolet: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //RED
@@ -104,12 +111,13 @@ export const lightRed: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkRed: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#B25A5A",
   colorSecondary: "#CA8D8D",
   placeholder: "#8F8F8F",
@@ -117,6 +125,7 @@ export const darkRed: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //ORANGE
@@ -131,12 +140,13 @@ export const lightOrange: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkOrange: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#E35204",
   colorSecondary: "#F2B18E",
   placeholder: "#8F8F8F",
@@ -144,6 +154,7 @@ export const darkOrange: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //TANGER
@@ -158,12 +169,13 @@ export const lightTanger: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkTanger: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#EA9306",
   colorSecondary: "#E9EBF8",
   placeholder: "#8F8F8F",
@@ -171,6 +183,7 @@ export const darkTanger: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //YELLOW
@@ -185,12 +198,13 @@ export const lightYellow: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkYellow: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#D8B262",
   colorSecondary: "#EDDCB8",
   placeholder: "#8F8F8F",
@@ -198,6 +212,7 @@ export const darkYellow: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //BROWN
@@ -212,12 +227,13 @@ export const lightBrown: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkBrown: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#927566",
   colorSecondary: "#B4A095",
   placeholder: "#8F8F8F",
@@ -225,6 +241,7 @@ export const darkBrown: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //CHOCOLATE
@@ -239,12 +256,13 @@ export const lightChocolate: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkChocolate: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#68432F",
   colorSecondary: "#BBAAA1",
   placeholder: "#8F8F8F",
@@ -252,6 +270,7 @@ export const darkChocolate: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //CINNAMON
@@ -266,12 +285,13 @@ export const lightCinnamon: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkCinnamon: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#B28060",
   colorSecondary: "#CAA791",
   placeholder: "#8F8F8F",
@@ -279,6 +299,7 @@ export const darkCinnamon: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //QUARTZ
@@ -293,12 +314,13 @@ export const lightQuartz: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkQuartz: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#C5659F",
   colorSecondary: "#D794BC",
   placeholder: "#8F8F8F",
@@ -306,6 +328,7 @@ export const darkQuartz: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //BLUSH
@@ -320,12 +343,13 @@ export const lightBlush: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkBlush: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#D776B0",
   colorSecondary: "#EDC1DB",
   placeholder: "#8F8F8F",
@@ -333,6 +357,7 @@ export const darkBlush: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //PEONY
@@ -347,12 +372,13 @@ export const lightPeony: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkPeony: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#CF3B94",
   colorSecondary: "#E9A7CF",
   placeholder: "#8F8F8F",
@@ -360,6 +386,7 @@ export const darkPeony: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //BLUESKY
@@ -374,12 +401,13 @@ export const lightBlueSky: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkBlueSky: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#599EDF",
   colorSecondary: "#8CBCE9",
   placeholder: "#8F8F8F",
@@ -387,6 +415,7 @@ export const darkBlueSky: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //COBALT
@@ -401,12 +430,13 @@ export const lightCobalt: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkCobalt: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#0736AD",
   colorSecondary: "#8FA5DA",
   placeholder: "#8F8F8F",
@@ -414,6 +444,7 @@ export const darkCobalt: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //POLAR
@@ -428,12 +459,13 @@ export const lightPolar: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkPolar: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#3BAFCF",
   colorSecondary: "#A7DBE9",
   placeholder: "#8F8F8F",
@@ -441,6 +473,7 @@ export const darkPolar: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //CIAN
@@ -455,12 +488,13 @@ export const lightCian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkCian: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#3BCFB1",
   colorSecondary: "#A7E9DC",
   placeholder: "#8F8F8F",
@@ -468,6 +502,7 @@ export const darkCian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //GREEN
@@ -482,12 +517,13 @@ export const lightGreen: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkGreen: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#",
   colorSecondary: "#93AC8E",
   placeholder: "#8F8F8F",
@@ -495,6 +531,7 @@ export const darkGreen: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
 
 //FOREST
@@ -509,12 +546,13 @@ export const lightForest: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#000000",
 };
 
 export const darkForest: Colors = {
-  background: "#ffffff",
-  backgroundSecondary: "#EEEEEE",
-  backgroundCard: "#DCDCDC",
+  background: "#222222",
+  backgroundSecondary: "#333333",
+  backgroundCard: "#333333",
   colorPrimary: "#499C45",
   colorSecondary: "#ADD2AB",
   placeholder: "#8F8F8F",
@@ -522,4 +560,5 @@ export const darkForest: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
+textColor: "#FFFFFF",
 };
