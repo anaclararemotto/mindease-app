@@ -24,7 +24,7 @@ export const LoginView = () => {
           <Input placeholder="Digite seu email" type="email"></Input>
           <Input placeholder="Digite sua senha" type="password"></Input>
         </View>
-        <Button title="Cadastrar" />
+        <Button href={'screens/Dashboard'} title="Cadastrar" />
 
         <View style={styles.linkContainer}>
           <Link href={'/'} style={styles.link}>Esqueci minha senha</Link>
