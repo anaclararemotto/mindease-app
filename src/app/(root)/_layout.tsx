@@ -1,11 +1,11 @@
 import {
-  Slot,
-  useRouter,
-  useSegments,
+  Stack,
   useRootNavigationState,
+  useRouter,
+  useSegments
 } from 'expo-router';
 import { useEffect } from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function AppLayout() {
@@ -39,5 +39,9 @@ export default function AppLayout() {
     );
   }
 
-  return <Slot />;
+  return <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        />;
 }
