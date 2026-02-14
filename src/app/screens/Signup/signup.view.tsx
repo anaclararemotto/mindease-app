@@ -12,7 +12,7 @@ export const SignupView = () => {
 
   return (
     <View style={styles.container}>
-      <Link href={"/screens/Login"}>
+      <Link href={"/(auth)/login"}>
         <ChevronLeft color={colors.colorPrimary} />
       </Link>
       <View style={styles.containerContent}>
@@ -36,7 +36,7 @@ export const SignupView = () => {
 
         <Text style={styles.text}>
           Já possui uma conta?{" "}
-          <Link href={"/screens/Login"} style={styles.link}>
+          <Link href={"/(auth)/login"} style={styles.link}>
             Login
           </Link>
         </Text>

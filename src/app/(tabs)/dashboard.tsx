@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/src/shared/theme/ThemeContext";
-import { DashboardView } from "./dashboard.view";
+import { DashboardView } from "../screens/Dashboard/dashboard.view";
 
-export default function LoginScreen() {
+export default function DashboardScreen() {
     return (
         <ThemeProvider>
             <DashboardView/>
