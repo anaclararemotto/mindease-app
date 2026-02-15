@@ -13,10 +13,10 @@ export const OptionCard = ({ label, icon: Icon }: OptionCardProps) => {
     return(
         <View style={styles.container}>
             <View style={styles.content}>
-                {Icon && <Icon size={20} color={colors.textColor} />}
+                {Icon && <Icon size={20} color={colors.brandAlternative} />}
                 <Text style={styles.text}> {label} </Text>
             </View>
-            <Link href={'/'}><ChevronRight color={colors.textColor}/></Link>
+            <Link href={'/'}><ChevronRight color={colors.brandAlternative}/></Link>
         </View>
     )
 }

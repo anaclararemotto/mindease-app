@@ -1,9 +1,9 @@
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { CalendarDays, Goal } from "lucide-react";
 import { Image, Text, View } from "react-native";
-import { OptionCard } from "../../components/OptionCard/optioncard";
 import { dashboardStyles } from "./dashboard.styles";
 import DashboardLight from "@/assets/images/dashboard-light.svg";
+import { OptionCard } from "../../components/OptionCard/optioncard";
 
 
 export const DashboardView = () => {

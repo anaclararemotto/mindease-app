@@ -16,6 +16,6 @@ export const optionCardStyles = (colors: Colors) =>
       gap: 10,
     },
     text:{
-        color: colors.textColor
+        color: colors.brandAlternative
     }
   });
