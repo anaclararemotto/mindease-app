@@ -10,6 +10,7 @@ export type Colors = {
   yellow: string;
   white: string;
   textColor: string;
+  brandAlternative: string;
 };
 
 //PURPLE
@@ -24,7 +25,8 @@ export const lightPurple: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#202C59",
 };
 
 export const darkPurple: Colors = {
@@ -38,7 +40,8 @@ export const darkPurple: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#E9EBF8",
 };
 
 //OBSIDIAN
@@ -53,7 +56,8 @@ export const lightObsidian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#200d59",
 };
 
 export const darkObsidian: Colors = {
@@ -67,7 +71,8 @@ export const darkObsidian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#b69dff",
 };
 
 //VIOLET
@@ -82,7 +87,8 @@ export const lightViolet: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#6E569F",
 };
 
 export const darkViolet: Colors = {
@@ -96,7 +102,8 @@ export const darkViolet: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#D0C1EE",
 };
 
 //RED
@@ -111,7 +118,8 @@ export const lightRed: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#640101",
 };
 
 export const darkRed: Colors = {
@@ -125,7 +133,8 @@ export const darkRed: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#ca8d8d",
 };
 
 //ORANGE
@@ -140,7 +149,8 @@ export const lightOrange: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#4f1d01",
 };
 
 export const darkOrange: Colors = {
@@ -154,7 +164,8 @@ export const darkOrange: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#f2b18e",
 };
 
 //TANGER
@@ -169,7 +180,8 @@ export const lightTanger: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#523302",
 };
 
 export const darkTanger: Colors = {
@@ -183,7 +195,8 @@ export const darkTanger: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#f6ce8f",
 };
 
 //YELLOW
@@ -198,7 +211,8 @@ export const lightYellow: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#9e8248",
 };
 
 export const darkYellow: Colors = {
@@ -212,7 +226,8 @@ export const darkYellow: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#eddcb8",
 };
 
 //BROWN
@@ -227,7 +242,8 @@ export const lightBrown: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#4b2510",
 };
 
 export const darkBrown: Colors = {
@@ -241,7 +257,8 @@ export const darkBrown: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#b4a095",
 };
 
 //CHOCOLATE
@@ -256,7 +273,8 @@ export const lightChocolate: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#4c3122",
 };
 
 export const darkChocolate: Colors = {
@@ -270,7 +288,8 @@ export const darkChocolate: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#bbaaa1",
 };
 
 //CINNAMON
@@ -285,7 +304,8 @@ export const lightCinnamon: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#642b07",
 };
 
 export const darkCinnamon: Colors = {
@@ -299,7 +319,8 @@ export const darkCinnamon: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#caa791",
 };
 
 //QUARTZ
@@ -314,7 +335,8 @@ export const lightQuartz: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#780d4e",
 };
 
 export const darkQuartz: Colors = {
@@ -328,7 +350,8 @@ export const darkQuartz: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#d794bc",
 };
 
 //BLUSH
@@ -343,7 +366,8 @@ export const lightBlush: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#9d5680",
 };
 
 export const darkBlush: Colors = {
@@ -357,7 +381,8 @@ export const darkBlush: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#edc1db",
 };
 
 //PEONY
@@ -372,7 +397,8 @@ export const lightPeony: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#972b6c",
 };
 
 export const darkPeony: Colors = {
@@ -386,7 +412,8 @@ export const darkPeony: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#e9a7cf",
 };
 
 //BLUESKY
@@ -401,7 +428,8 @@ export const lightBlueSky: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#8cbce9",
 };
 
 export const darkBlueSky: Colors = {
@@ -415,7 +443,8 @@ export const darkBlueSky: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#002548",
 };
 
 //COBALT
@@ -430,7 +459,8 @@ export const lightCobalt: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#02133d",
 };
 
 export const darkCobalt: Colors = {
@@ -444,7 +474,8 @@ export const darkCobalt: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#8fa5da",
 };
 
 //POLAR
@@ -459,7 +490,8 @@ export const lightPolar: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#153d48",
 };
 
 export const darkPolar: Colors = {
@@ -473,7 +505,8 @@ export const darkPolar: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#a7dbe9",
 };
 
 //CIAN
@@ -488,7 +521,8 @@ export const lightCian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#2b9781",
 };
 
 export const darkCian: Colors = {
@@ -502,7 +536,8 @@ export const darkCian: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#a7e9dc",
 };
 
 //GREEN
@@ -517,7 +552,8 @@ export const lightGreen: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#1a3718",
 };
 
 export const darkGreen: Colors = {
@@ -531,7 +567,8 @@ export const darkGreen: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#add2ab",
 };
 
 //FOREST
@@ -546,7 +583,8 @@ export const lightForest: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#000000",
+  textColor: "#000000",
+  brandAlternative: "#051901",
 };
 
 export const darkForest: Colors = {
@@ -560,5 +598,6 @@ export const darkForest: Colors = {
   green: "#03A201",
   yellow: "#ECE404",
   white: "#FFFFFF",
-textColor: "#FFFFFF",
+  textColor: "#FFFFFF",
+  brandAlternative: "#93ac8e",
 };
