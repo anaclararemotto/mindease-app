@@ -1,6 +1,5 @@
 import { Colors } from "@/src/shared/theme/colors";
 import { typography } from "@/src/shared/theme/typography";
-import { Rows } from "lucide-react";
 import { StyleSheet } from "react-native";
 
 export const profileCardStyles = (colors: Colors) =>

@@ -35,7 +35,7 @@ export const ContentView = () => {
           <ScheduleCard priority="low" />
         </ScrollView>
       </View>
-      <ContentCard href='/' icon={LibraryBig} title="Conteúdos" subtitle="Escolha o conteúdo e avance no estudo."/>
+      <ContentCard href={'/screens/Schedule'} icon={LibraryBig} title="Conteúdos" subtitle="Escolha o conteúdo e avance no estudo."/>
       <ContentCard href='/' icon={NotebookPen} title="Anotações" subtitle="Organize ideias, resumos e insights."/>
       <ContentCard href='/' icon={WalletCards} title="FlashCards" subtitle="Revisão rápida para fixar o que importa."/>
       <ContentCard href='/' icon={Hourglass} title="Timer / Modo Foco" subtitle="Hora de focar e estudar com intenção."/>
