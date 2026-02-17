@@ -4,15 +4,17 @@ import { StyleSheet } from "react-native";
 export const scheduleHeaderStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
-    flexDirection: "row",
+    gap: 10
+  },
+  topRow:{
+    flexDirection: 'row',
     alignItems: "center",
     justifyContent: "space-between",
-    paddingVertical: 10,
   },
   title: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#3D5AFE",
+    color: colors.colorPrimary,
   },
   monthRow: {
     flexDirection: "row",

@@ -1,58 +1,50 @@
-import { useTheme } from "@/src/shared/theme/ThemeContext";
-import { ScrollView, View } from "react-native";
-import { scheduleStyles } from "./schedule.styles";
-import { ScheduleHeader } from "../../components/ScheduleHeader/scheduleheader";
-import { AddEventModal } from "../../components/AddEventModal/addeventmodal";
-import { CalendarCompact } from "../../components/CalendarCompact/calendarcompact";
-import { CalendarMonth } from "../../components/CalendarMonth/calendarmonth";
 import { useState } from "react";
-import { WeekDaysRow } from "../../components/WeekDaysRow/weekdaysrow";
-import { CalendarGrid } from "../../components/CalendarGrid/calendargrid";
+import { View } from "react-native";
+
+import { useTheme } from "@/src/shared/theme/ThemeContext";
+import { AddEventModal } from "../../components/AddEventModal/addeventmodal";
+import { Button } from "../../components/Button/button";
+import { CalendarComponent } from "../../components/CalendarComponent/calendarcomponent";
+import { EventsList } from "../../components/EventsList/eventlist";
+import { ScheduleHeader } from "../../components/ScheduleHeader/scheduleheader";
+import { scheduleStyles } from "./schedule.styles";
 
 export const ScheduleView = () => {
   const { colors } = useTheme();
   const styles = scheduleStyles(colors);
-
- const [selectedDate, setSelectedDate] = useState<number | null>(null);
-  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<string>("");
   const [events, setEvents] = useState<any[]>([]);
+  const [modalVisible, setModalVisible] = useState(false);
 
-const handleAddEvent = (newEvent: any) => {
-  setEvents((prev) => [...prev, newEvent]);
-};
+  const eventsOfDay = events.filter((e) => e.date === selectedDate);
 
-
-  const handleSaveEvent = (eventData: any) => {
-    setEvents((prev) => [...prev, eventData]);
+  const handleSave = (newEvent: any) => {
+    setEvents((prev) => [...prev, newEvent]);
     setModalVisible(false);
   };
 
-  const [expandedDay, setExpandedDay] = useState<number | null>(null);
-
-const handleDayPress = (day: number) => {
-  setExpandedDay(prev => (prev === day ? null : day));
-};
-
-
   return (
-    <ScrollView showsHorizontalScrollIndicator={false}>
-      <View style={styles.container}>
-       <ScheduleHeader />
-      <WeekDaysRow />
-
-      <CalendarGrid
-        onDayPress={handleDayPress}
-  events={events}
-  expandedDay={expandedDay}
+    <View style={styles.container}>
+      <ScheduleHeader />
+      <CalendarComponent
+        selectedDate={selectedDate}
+        onSelectDate={setSelectedDate}
       />
+
+      <EventsList selectedDate={selectedDate} events={eventsOfDay} />
 
       <AddEventModal
         visible={modalVisible}
-  selectedDate={selectedDate}
-  onClose={() => setModalVisible(false)}
-  onSave={handleAddEvent}
+        selectedDate={selectedDate}
+        onClose={() => setModalVisible(false)}
+        onSave={handleSave}
       />
-      </View>
-    </ScrollView>
+
+      {selectedDate && (
+        <View style={{ padding: 16 }}>
+          <Button title="Adicionar Evento" onPress={() => setModalVisible(true)} />
+        </View>
+      )}
+    </View>
   );
 };

@@ -6,7 +6,7 @@ export const inputStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
       gap: 5,
-      width: '100%'
+      flex: 1
     },
     inputContainer: {
         backgroundColor: colors.backgroundSecondary,

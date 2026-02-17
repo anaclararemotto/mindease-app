@@ -1,29 +1,26 @@
-import {
-  Modal,
-  View,
-  Text,
-  ScrollView,
-} from "react-native";
+import { Modal, View, Text, ScrollView } from "react-native";
 import { useEffect, useState } from "react";
 
-import { AddEventModalProps } from "./addeventmodal.types";
-import { addEventModalStyles } from "./addeventmodal.styles";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Input } from "../Input/input";
 import { Button } from "../Button/button";
 
+type Props = {
+  visible: boolean;
+  selectedDate: string;
+  onClose: () => void;
+  onSave: (event: any) => void;
+};
 
 export const AddEventModal = ({
   visible,
   selectedDate,
   onClose,
   onSave,
-}: AddEventModalProps) => {
+}: Props) => {
   const { colors } = useTheme();
-  const styles = addEventModalStyles(colors);
 
   const [name, setName] = useState("");
-  const [date, setDate] = useState("");
   const [hour, setHour] = useState("");
   const [description, setDescription] = useState("");
   const [type, setType] = useState("");
@@ -38,27 +35,15 @@ export const AddEventModal = ({
       setType("");
       setSubject("");
       setPriority("");
-
-      if (selectedDate) {
-        const currentYear = 2026;
-        const currentMonth = 1; // Janeiro fixo por enquanto
-
-        const formattedDate = `${String(selectedDate).padStart(2, "0")}/${String(currentMonth).padStart(2, "0")}/${currentYear}`;
-        setDate(formattedDate);
-      } else {
-        setDate("");
-      }
     }
-  }, [visible, selectedDate]);
+  }, [visible]);
 
   const handleSave = () => {
-    if (!date || date.length !== 10) return;
-
-    const [day] = date.split("/").map(Number);
+    if (!name || !selectedDate) return;
 
     onSave({
-      date: day,
-      fullDate: date,
+      id: Date.now().toString(),
+      date: selectedDate, // formato YYYY-MM-DD
       name,
       hour,
       description,
@@ -72,24 +57,42 @@ export const AddEventModal = ({
 
   return (
     <Modal visible={visible} animationType="slide" transparent>
-      <View style={styles.overlay}>
-        <View style={styles.modal}>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: "rgba(0,0,0,0.4)",
+          justifyContent: "center",
+          padding: 20,
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: colors.background,
+            borderRadius: 20,
+            padding: 20,
+            maxHeight: "85%",
+          }}
+        >
           <ScrollView showsVerticalScrollIndicator={false}>
-            <Text style={styles.title}>
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                marginBottom: 16,
+                color: colors.text,
+              }}
+            >
               Novo Evento
+            </Text>
+
+            <Text style={{ marginBottom: 12, color: colors.placeholder }}>
+              Data: {selectedDate}
             </Text>
 
             <Input
               placeholder="Nome do evento"
               value={name}
               onChangeText={setName}
-            />
-
-            <Input
-              type="date"
-              placeholder="Data (dd/mm/aaaa)"
-              value={date}
-              onChangeText={setDate}
             />
 
             <Input
@@ -122,17 +125,12 @@ export const AddEventModal = ({
               onChangeText={setPriority}
             />
 
-            <Button
-              title="Salvar"
-              onPress={handleSave}
-            />
+            <View style={{ marginTop: 20 }}>
+              <Button title="Salvar" onPress={handleSave} />
+            </View>
 
-            <View style={{ marginTop: 12 }}>
-              <Button
-                title="Cancelar"
-                onPress={onClose}
-                disabled={false}
-              />
+            <View style={{ marginTop: 10 }}>
+              <Button title="Cancelar" onPress={onClose} />
             </View>
           </ScrollView>
         </View>

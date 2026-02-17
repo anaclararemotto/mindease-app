@@ -4,8 +4,8 @@ import { StyleSheet } from "react-native";
 export const scheduleStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingHorizontal: 16,
+    backgroundColor: colors.background,
+    paddingHorizontal: 30,
+    height: '100%'
   },
   });
