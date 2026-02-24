@@ -1,6 +1,6 @@
-import { Colors } from '@/src/shared/theme/colors';
-import { typography } from '@/src/shared/theme/typography';
-import { StyleSheet } from 'react-native';
+import { Colors } from "@/src/shared/theme/colors";
+import { typography } from "@/src/shared/theme/typography";
+import { StyleSheet } from "react-native";
 
 export const dashboardStyles = (colors: Colors) =>
   StyleSheet.create({
@@ -8,24 +8,26 @@ export const dashboardStyles = (colors: Colors) =>
       backgroundColor: colors.background,
       paddingHorizontal: 30,
       paddingVertical: 90,
-      height: '100%',
+      height: "100%",
       gap: 20,
-      alignItems: 'center'
+      alignItems: "center",
     },
     containerText: {
       gap: 5,
-      width: '100%'
+      width: "100%",
     },
     title: {
       ...typography.headingmd,
-      color: colors.colorPrimary
+      color: colors.colorPrimary,
     },
     subtitle: {
       ...typography.bodylg,
-      color: colors.textColor
+      color: colors.textColor,
     },
     image: {
       width: "90%",
+      height: 250,
+      aspectRatio: 1,
     },
     containerOptions: {
       width: "100%",

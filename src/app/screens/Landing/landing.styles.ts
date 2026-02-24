@@ -10,7 +10,7 @@ export const landingStyles = (colors: Colors) =>
       backgroundColor: colors.background,
       height: "100%",
       paddingHorizontal: 30,
-      gap: 40
+      gap: 40,
     },
     brandContainer: {
       justifyContent: "center",
@@ -19,6 +19,8 @@ export const landingStyles = (colors: Colors) =>
     },
     image: {
       width: "90%",
+      height: 250,
+      aspectRatio: 1,
     },
     brand: {
       ...typography.headingxxl,

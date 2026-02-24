@@ -1,7 +1,8 @@
-import LandingLight from "@/assets/images/landing-light.svg";
+const LandingLight = require("@/assets/images/landing-light.svg");
 import { useTheme } from "@/src/shared/theme/ThemeContext";
-import { MoveRight } from "lucide-react";
-import { Image, Text, View } from "react-native";
+import { Image } from "expo-image";
+import { MoveRight } from "lucide-react-native";
+import { Text, View } from "react-native";
 import { Button } from "../../components/Button/button";
 import { landingStyles } from "./landing.styles";
 
@@ -13,10 +14,12 @@ export const LandingView = () => {
     <View style={styles.container}>
       <View style={styles.brandContainer}>
         <Image
-          source={LandingLight}
+          source={LandingLight} // Aqui o expo-image resolve o require automaticamente
           style={styles.image}
-          resizeMode="contain"
+          contentFit="contain"
+          transition={200} // Adiciona um leve efeito ao aparecer
         />
+
         <Text style={styles.brand}>MindEase</Text>
       </View>
       <View style={styles.containerContent}>
@@ -26,7 +29,13 @@ export const LandingView = () => {
         </Text>
         <Text style={styles.wellcome}>Bem vindo ao MindEase!</Text>
       </View>
-      <Button showIcon icon={MoveRight} title="Começar" iconPosition="right" href={'/(auth)/login'} />
+      <Button
+        showIcon
+        icon={MoveRight}
+        title="Começar"
+        iconPosition="right"
+        href={"/(auth)/login"}
+      />
     </View>
   );
 };
