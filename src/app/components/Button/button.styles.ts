@@ -6,12 +6,13 @@ export const buttonStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
       backgroundColor: colors.colorPrimary,
-      width: '100%',
       paddingHorizontal: 12,
       paddingVertical: 10,
       justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 16
+        borderRadius: 16,
+         flex: 1,
+        
     },
     text: {
         ...typography.button,
