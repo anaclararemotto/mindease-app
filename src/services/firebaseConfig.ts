@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDnPEVInUD3g94wuErosI67B_LmOfruTlo",
+  apiKey: "AIzaSyCt9rQJ8JhrPC1MRRjVxcKc1VmA8__42Dw",
   authDomain: "mindease-app-8f1ce.firebaseapp.com",
   projectId: "mindease-app-8f1ce",
   storageBucket: "mindease-app-8f1ce.firebasestorage.app",
