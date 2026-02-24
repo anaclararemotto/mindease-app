@@ -6,6 +6,8 @@ export const scheduleStyles = (colors: Colors) =>
     container: {
     backgroundColor: colors.background,
     paddingHorizontal: 30,
-    height: '100%'
+    paddingVertical: 90,
+    height: '100%',
+    gap: 20
   },
   });
