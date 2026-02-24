@@ -26,7 +26,15 @@ export const LandingView = () => {
         </Text>
         <Text style={styles.wellcome}>Bem vindo ao MindEase!</Text>
       </View>
-      <Button showIcon icon={MoveRight} title="Começar" iconPosition="right" href={'/(auth)/login'} />
+      <View style={styles.button}>
+        <Button
+          showIcon
+          icon={MoveRight}
+          title="Começar"
+          iconPosition="right"
+          href={"/(auth)/login"}
+        />
+      </View>
     </View>
   );
 };

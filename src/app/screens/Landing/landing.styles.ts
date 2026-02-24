@@ -10,7 +10,8 @@ export const landingStyles = (colors: Colors) =>
       backgroundColor: colors.background,
       height: "100%",
       paddingHorizontal: 30,
-      gap: 40
+      gap: 40,
+      
     },
     brandContainer: {
       justifyContent: "center",
@@ -39,4 +40,7 @@ export const landingStyles = (colors: Colors) =>
       textAlign: "center",
       fontWeight: 600,
     },
+    button:{
+      width: '100%'
+    }
   });
