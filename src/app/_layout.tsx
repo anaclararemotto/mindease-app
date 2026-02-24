@@ -1,25 +1,17 @@
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import { Slot, Stack } from "expo-router";
+import { ThemeProvider } from "../shared/theme/ThemeContext";
+import { AuthProvider } from "./contexts/AuthContext";
 
-SplashScreen.preventAutoHideAsync();
-
-export default function Layout() {
-  useEffect(() => {
-    async function prepare() {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-
-      await SplashScreen.hideAsync();
-    }
-
-    prepare();
-  }, []);
-
+export default function RootLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    />
+    <ThemeProvider>
+      <AuthProvider>
+        <Stack
+          screenOptions={{
+            headerShown: false,
+          }}
+        />
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
