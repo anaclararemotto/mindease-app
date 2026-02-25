@@ -1,7 +1,6 @@
-import { Colors } from '@/src/shared/theme/colors';
-import { typography } from '@/src/shared/theme/typography';
-import { Subtitles } from 'lucide-react';
-import { StyleSheet } from 'react-native';
+import { Colors } from "@/src/shared/theme/colors";
+import { typography } from "@/src/shared/theme/typography";
+import { StyleSheet } from "react-native";
 
 export const scheduleCardStyles = (colors: Colors) =>
   StyleSheet.create({
@@ -10,24 +9,23 @@ export const scheduleCardStyles = (colors: Colors) =>
       borderWidth: 1,
       borderRadius: 16,
       padding: 15,
-      gap: 10
+      gap: 10,
     },
     inline: {
-        flexDirection: 'row',
-        gap: 10,
-        alignItems: 'flex-end'
-        
+      flexDirection: "row",
+      gap: 10,
+      alignItems: "flex-end",
     },
-    hour:{
-        ...typography.headingmd,
-        color: colors.colorPrimary
+    hour: {
+      ...typography.headingmd,
+      color: colors.colorPrimary,
     },
-    title:{
-        ...typography.bodysm,
-        color: colors.placeholder
+    title: {
+      ...typography.bodysm,
+      color: colors.placeholder,
     },
-    subtitle:{
-        ...typography.bodylg,
-        color: colors.textColor
+    subtitle: {
+      ...typography.bodylg,
+      color: colors.textColor,
     },
   });
