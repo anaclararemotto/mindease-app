@@ -1,26 +1,27 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Image } from "expo-image";
+import { useRouter } from "expo-router"; // Importando para navegação
 import { doc, getDoc } from "firebase/firestore";
-import { CalendarDays, Goal, LogOut } from "lucide-react-native"; // Adicionei LogOut
+import { CalendarDays, Goal, LogOut } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { db } from "../../../services/firebaseConfig";
 import { OptionCard } from "../../components/OptionCard/optioncard";
 import { dashboardStyles } from "./dashboard.styles";
 
-// O require deve vir após os imports
 const DashboardLight = require("@/assets/images/dashboard-light.svg");
 
 export const DashboardView = () => {
   const { colors } = useTheme();
   const styles = dashboardStyles(colors);
-  const { user, logout } = useAuth(); // Importamos o logout aqui
+  const { user, logout } = useAuth();
   const [userName, setUserName] = useState("...");
+  const router = useRouter(); // Inicializando o roteador
 
   useEffect(() => {
     const fetchUserData = async () => {
-      if (!user?.id) return; // Segurança extra
+      if (!user?.id) return;
 
       try {
         const docRef = doc(db, "users", user.id);
@@ -42,16 +43,8 @@ export const DashboardView = () => {
 
   return (
     <View style={styles.container}>
-      {/* Cabeçalho com botão de sair */}
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "100%",
-          paddingBottom: 20,
-        }}
-      >
+      {/* Cabeçalho Ajustado */}
+      <View style={styles.header}>
         <View style={styles.containerText}>
           <Text style={styles.title}>Olá {userName}!</Text>
           <Text style={styles.subtitle}>
@@ -59,7 +52,11 @@ export const DashboardView = () => {
           </Text>
         </View>
 
-        <TouchableOpacity onPress={() => logout()} style={{ padding: 10 }}>
+        <TouchableOpacity
+          onPress={() => logout()}
+          style={styles.logoutButton}
+          activeOpacity={0.7}
+        >
           <LogOut color={colors.colorPrimary} size={24} />
         </TouchableOpacity>
       </View>
@@ -71,8 +68,16 @@ export const DashboardView = () => {
       />
 
       <View style={styles.containerOptions}>
-        <OptionCard label="Cronograma do dia" icon={CalendarDays} />
-        <OptionCard label="Desafio de hoje" icon={Goal} />
+        <OptionCard
+          label="Cronograma do dia"
+          icon={CalendarDays}
+          onPress={() => router.push("/(tabs)/schedule" as any)} // Alvo para o cronograma
+        />
+        <OptionCard
+          label="Desafio de hoje"
+          icon={Goal}
+          onPress={() => router.push("/(tabs)/challenges" as any)} // Alvo para desafios
+        />
       </View>
     </View>
   );

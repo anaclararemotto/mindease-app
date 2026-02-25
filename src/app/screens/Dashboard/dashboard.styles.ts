@@ -5,16 +5,24 @@ import { StyleSheet } from "react-native";
 export const dashboardStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
+      flex: 1, // Melhor que height: "100%" para evitar cortes em telas menores
       backgroundColor: colors.background,
       paddingHorizontal: 30,
-      paddingVertical: 90,
-      height: "100%",
-      gap: 20,
+      paddingTop: 60, // Ajustado para não colar no topo do iPhone/Android
+      paddingBottom: 20,
       alignItems: "center",
+      gap: 20,
+    },
+    header: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      width: "100%",
+      paddingBottom: 10,
     },
     containerText: {
       gap: 5,
-      width: "100%",
+      flex: 1, // Garante que o texto não empurre o botão de logout para fora
     },
     title: {
       ...typography.headingmd,
@@ -24,6 +32,11 @@ export const dashboardStyles = (colors: Colors) =>
       ...typography.bodylg,
       color: colors.textColor,
     },
+    logoutButton: {
+      padding: 10,
+      justifyContent: "center",
+      alignItems: "center",
+    },
     image: {
       width: "90%",
       height: 250,
@@ -32,5 +45,6 @@ export const dashboardStyles = (colors: Colors) =>
     containerOptions: {
       width: "100%",
       gap: 20,
+      marginTop: 10,
     },
   });
