@@ -11,10 +11,6 @@ export const landingStyles = (colors: Colors) =>
       height: "100%",
       paddingHorizontal: 30,
       gap: 40,
-<<<<<<< HEAD
-=======
-      
->>>>>>> 651039214a40244316b0ee79b89671d03b277afc
     },
     brandContainer: {
       justifyContent: "center",
@@ -43,9 +39,11 @@ export const landingStyles = (colors: Colors) =>
     wellcome: {
       ...typography.bodylg,
       textAlign: "center",
-      fontWeight: 600,
+      fontWeight: "600",
     },
-    button:{
-      width: '100%'
-    }
+    button: {
+      width: "100%",
+      maxWidth: 300,
+      marginTop: 20,
+    },
   });

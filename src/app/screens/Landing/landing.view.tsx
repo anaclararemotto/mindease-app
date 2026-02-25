@@ -14,10 +14,10 @@ export const LandingView = () => {
     <View style={styles.container}>
       <View style={styles.brandContainer}>
         <Image
-          source={LandingLight} // Aqui o expo-image resolve o require automaticamente
+          source={LandingLight}
           style={styles.image}
           contentFit="contain"
-          transition={200} // Adiciona um leve efeito ao aparecer
+          transition={200}
         />
 
         <Text style={styles.brand}>MindEase</Text>
@@ -29,13 +29,15 @@ export const LandingView = () => {
         </Text>
         <Text style={styles.wellcome}>Bem vindo ao MindEase!</Text>
       </View>
-      <Button
-        showIcon
-        icon={MoveRight}
-        title="Começar"
-        iconPosition="right"
-        href={"/(auth)/login"}
-      />
+      <View style={styles.button}>
+        <Button
+          showIcon
+          icon={MoveRight}
+          title="Começar"
+          iconPosition="right"
+          href={"/(auth)/login"}
+        />
+      </View>
     </View>
   );
 };

@@ -1,6 +1,5 @@
 import { useTheme } from "@/src/shared/theme/ThemeContext";
-import { Goal, Wrench } from "lucide-react";
-import { Download, History, LogOut } from "lucide-react-native";
+import { Download, Goal, History, LogOut, Wrench } from "lucide-react-native";
 import { ScrollView, View } from "react-native";
 import { InfoCard } from "../../components/InfoCard/infocard";
 import { OptionCard } from "../../components/OptionCard/optioncard";
