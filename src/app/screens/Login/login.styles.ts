@@ -4,47 +4,48 @@ import { StyleSheet } from "react-native";
 
 export const loginStyles = (colors: Colors) =>
   StyleSheet.create({
-    container:{
+    container: {
+      flex: 1,
       backgroundColor: colors.background,
-      height: "100%",
-      width: "100%",
       paddingHorizontal: 30,
-      paddingVertical: 90,
-      gap: 50
+      paddingTop: 60,
+      paddingBottom: 20,
+    },
+    containerContent: {
+      justifyContent: "center",
+      gap: 30,
     },
     containerTitle: {
-gap: 10,
+      gap: 10,
+      marginBottom: 10,
     },
     title: {
       color: colors.colorPrimary,
       ...typography.headingmd,
-      textAlign: 'center'
+      textAlign: "center",
     },
     subtitle: {
       color: colors.textColor,
       ...typography.headingxs,
-      textAlign: 'center'
-    },
-    containerContent: {
-gap: 20,
+      textAlign: "center",
     },
     inputContainer: {
       width: "100%",
-      gap: 10,
+      gap: 15,
     },
     linkContainer: {
-      gap: 10,
+      gap: 15,
+      marginTop: 10,
     },
-    link:{
-  color: colors.colorPrimary,
+    link: {
+      color: colors.colorPrimary,
       ...typography.bodylg,
-      textAlign: 'center',
-      textDecorationLine: 'underline'
+      textAlign: "center",
+      textDecorationLine: "underline",
     },
-    text:{
+    text: {
       color: colors.textColor,
       ...typography.bodylg,
-      textAlign: 'center'
+      textAlign: "center",
     },
-    
   });

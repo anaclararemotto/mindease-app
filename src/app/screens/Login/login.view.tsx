@@ -6,7 +6,15 @@ import {
 } from "firebase/auth";
 import { ChevronLeft } from "lucide-react-native";
 import React, { useState } from "react";
-import { Alert, Text, TouchableOpacity, View } from "react-native";
+import {
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { auth } from "../../../services/firebaseConfig";
 import { Button } from "../../components/Button/button";
 import { Input } from "../../components/Input/input";
@@ -37,7 +45,6 @@ export const LoginView = () => {
     }
   };
 
-  // Nova função para recuperação de senha
   const handleForgotPassword = async () => {
     if (!email) {
       Alert.alert(
@@ -46,7 +53,6 @@ export const LoginView = () => {
       );
       return;
     }
-
     try {
       await sendPasswordResetEmail(auth, email);
       Alert.alert(
@@ -62,50 +68,61 @@ export const LoginView = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Link href={"/"}>
-        <ChevronLeft color={colors.colorPrimary} />
-      </Link>
-      <View style={styles.containerContent}>
-        <View style={styles.containerTitle}>
-          <Text style={styles.title}>Entre com sua conta</Text>
-          <Text style={styles.subtitle}>Bem vindo de volta!</Text>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={{ flex: 1, backgroundColor: colors.background }}
+    >
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1 }}
+        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
+      >
+        <View style={styles.container}>
+          <Link href={"/"}>
+            <ChevronLeft color={colors.colorPrimary} />
+          </Link>
+
+          <View style={styles.containerContent}>
+            <View style={styles.containerTitle}>
+              <Text style={styles.title}>Entre com sua conta</Text>
+              <Text style={styles.subtitle}>Bem vindo de volta!</Text>
+            </View>
+
+            <View style={styles.inputContainer}>
+              <Input
+                placeholder="Digite seu email"
+                type="email"
+                value={email}
+                onChangeText={setEmail}
+              />
+              <Input
+                placeholder="Digite sua senha"
+                type="password"
+                value={password}
+                onChangeText={setPassword}
+              />
+            </View>
+
+            <Button
+              title={loading ? "Entrando..." : "Entrar"}
+              onPress={handleLogin}
+            />
+
+            <View style={styles.linkContainer}>
+              <TouchableOpacity onPress={handleForgotPassword}>
+                <Text style={styles.link}>Esqueci minha senha</Text>
+              </TouchableOpacity>
+
+              <Text style={styles.text}>
+                Ainda não possui uma conta?{" "}
+                <Link href={"/(auth)/signup"} style={styles.link}>
+                  Cadastre-se
+                </Link>
+              </Text>
+            </View>
+          </View>
         </View>
-
-        <View style={styles.inputContainer}>
-          <Input
-            placeholder="Digite seu email"
-            type="email"
-            value={email}
-            onChangeText={setEmail}
-          />
-          <Input
-            placeholder="Digite sua senha"
-            type="password"
-            value={password}
-            onChangeText={setPassword}
-          />
-        </View>
-
-        <Button
-          title={loading ? "Entrando..." : "Entrar"}
-          onPress={handleLogin}
-        />
-
-        <View style={styles.linkContainer}>
-          {/* Alterado de Link para TouchableOpacity para executar a função */}
-          <TouchableOpacity onPress={handleForgotPassword}>
-            <Text style={styles.link}>Esqueci minha senha</Text>
-          </TouchableOpacity>
-
-          <Text style={styles.text}>
-            Ainda não possui uma conta?{" "}
-            <Link href={"/(auth)/signup"} style={styles.link}>
-              Cadastre-se
-            </Link>
-          </Text>
-        </View>
-      </View>
-    </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 };

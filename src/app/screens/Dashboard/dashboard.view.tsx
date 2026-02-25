@@ -71,12 +71,12 @@ export const DashboardView = () => {
         <OptionCard
           label="Cronograma do dia"
           icon={CalendarDays}
-          onPress={() => router.push("/(tabs)/schedule" as any)} // Alvo para o cronograma
+          onPress={() => router.push("/(tabs)/content" as any)}
         />
         <OptionCard
           label="Desafio de hoje"
           icon={Goal}
-          onPress={() => router.push("/(tabs)/challenges" as any)} // Alvo para desafios
+          onPress={() => router.push("/(tabs)/profile" as any)}
         />
       </View>
     </View>
