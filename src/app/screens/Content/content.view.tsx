@@ -1,6 +1,7 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import {
+  addDoc,
   collection,
   onSnapshot,
   orderBy,
@@ -8,23 +9,26 @@ import {
   where,
 } from "firebase/firestore";
 import {
-  AlarmClock,
-  ChevronRight,
+  AlarmClock, // Troquei o ChevronRight pelo Plus para ficar mais intuitivo
   Hourglass,
   LibraryBig,
   Newspaper,
   NotebookPen,
+  Plus,
   WalletCards,
 } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
+  Alert,
   ScrollView,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import { db } from "../../../services/firebaseConfig";
+
+import { AddEventModal } from "../../components/AddEventModal/addeventmodal";
 import { ContentCard } from "../../components/ContentCard/contentcard";
 import { ScheduleCard } from "../../components/Schedule/schedule";
 import { contentStyles } from "./content.styles";
@@ -36,6 +40,25 @@ export const ContentView = () => {
 
   const [schedules, setSchedules] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  // Função para salvar o novo evento no Firebase
+  const handleSaveEvent = async (eventData: any) => {
+    try {
+      if (!user?.id) return;
+
+      await addDoc(collection(db, "schedules"), {
+        ...eventData,
+        userId: user.id,
+        createdAt: new Date(),
+      });
+
+      // O onSnapshot vai atualizar a lista automaticamente
+    } catch (error) {
+      console.error("Erro ao salvar evento:", error);
+      Alert.alert("Erro", "Não foi possível salvar o evento.");
+    }
+  };
 
   useEffect(() => {
     if (!user?.id) return;
@@ -78,8 +101,17 @@ export const ContentView = () => {
               Veja o que está planejado para hoje.
             </Text>
           </View>
-          <TouchableOpacity>
-            <ChevronRight color={colors.brandAlternative} />
+
+          {/* Botão que abre a Modal */}
+          <TouchableOpacity
+            onPress={() => setModalVisible(true)}
+            style={{
+              backgroundColor: colors.brandAlternative + "20",
+              padding: 8,
+              borderRadius: 12,
+            }}
+          >
+            <Plus color={colors.brandAlternative} size={24} />
           </TouchableOpacity>
         </View>
 
@@ -103,9 +135,11 @@ export const ContentView = () => {
                 />
               ))
             ) : (
-              <Text style={[styles.subtitle, { marginLeft: 10 }]}>
-                Nenhuma tarefa agendada.
-              </Text>
+              <View style={{ paddingVertical: 20 }}>
+                <Text style={[styles.subtitle, { marginLeft: 10 }]}>
+                  Nenhuma tarefa agendada. Toque no + para adicionar.
+                </Text>
+              </View>
             )}
           </ScrollView>
         </View>
@@ -141,6 +175,14 @@ export const ContentView = () => {
           subtitle="Fique por dentro das atualidades."
         />
       </View>
+
+      {/* Componente da Modal */}
+      <AddEventModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        onSave={handleSaveEvent}
+        selectedDate={new Date().toLocaleDateString("pt-BR")}
+      />
     </ScrollView>
   );
 };
