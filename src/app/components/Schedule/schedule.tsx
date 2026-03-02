@@ -3,16 +3,22 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { scheduleCardStyles } from "./schedule.styles";
 import { ScheduleProps } from "./schedule.types";
 
-export const ScheduleCard = ({ priority }: ScheduleProps) => {
+export const ScheduleCard = ({
+  priority,
+  hour,
+  date,
+  type,
+  subject,
+}: ScheduleProps) => {
   const { colors } = useTheme();
   const styles = scheduleCardStyles(colors);
 
   const color =
     priority === "high"
-      ? colors.green
+      ? colors.red
       : priority === "medium"
         ? colors.yellow
-        : colors.red;
+        : colors.green;
 
   const priorityMap = {
     high: "Alta",
@@ -23,27 +29,31 @@ export const ScheduleCard = ({ priority }: ScheduleProps) => {
   const translatedPriority = priorityMap[priority];
 
   return (
-    <TouchableOpacity>
-        <View style={styles.containerCard}>
-      <View style={styles.inline}>
-        <Text style={styles.hour}>07:00</Text>
-        <Text style={styles.title}>09/01/2026</Text>
-      </View>
-      <View style={styles.inline}>
-        <View>
-          <Text style={styles.title}>Tipo</Text>
-          <Text style={styles.subtitle}>Revisão</Text>
+    <TouchableOpacity activeOpacity={0.7}>
+      <View style={styles.containerCard}>
+        <View style={styles.inline}>
+          <Text style={styles.hour}>{hour}</Text>
+          <Text style={styles.title}>{date}</Text>
         </View>
+
+        <View style={styles.inline}>
+          <View>
+            <Text style={styles.title}>Tipo</Text>
+            <Text style={styles.subtitle}>{type}</Text>
+          </View>
+          <View>
+            <Text style={styles.title}>Matéria</Text>
+            <Text style={styles.subtitle}>{subject}</Text>
+          </View>
+        </View>
+
         <View>
-          <Text style={styles.title}>Matéria</Text>
-          <Text style={styles.subtitle}>Matemática</Text>
+          <Text style={styles.title}>Prioridade</Text>
+          <Text style={[styles.subtitle, { color, fontWeight: "bold" }]}>
+            {translatedPriority}
+          </Text>
         </View>
       </View>
-      <View>
-        <Text style={styles.title}>Prioridade</Text>
-        <Text style={[ styles.subtitle, { color }]}>{translatedPriority}</Text>
-      </View>
-    </View>
     </TouchableOpacity>
   );
 };

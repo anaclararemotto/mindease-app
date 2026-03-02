@@ -12,9 +12,15 @@ export const loginStyles = (colors: Colors) =>
       paddingBottom: 20,
     },
     containerContent: {
-      justifyContent: "center",
       gap: 30,
     },
+
+    buttonWrapper: {
+      height: 56,
+      width: "100%",
+      marginTop: 10,
+    },
+
     containerTitle: {
       gap: 10,
       marginBottom: 10,

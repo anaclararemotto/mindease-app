@@ -103,10 +103,17 @@ export const LoginView = () => {
               />
             </View>
 
-            <Button
+            {/* <Button
               title={loading ? "Entrando..." : "Entrar"}
               onPress={handleLogin}
-            />
+            /> */}
+
+            <View style={styles.buttonWrapper}>
+              <Button
+                title={loading ? "Entrando..." : "Entrar"}
+                onPress={handleLogin}
+              />
+            </View>
 
             <View style={styles.linkContainer}>
               <TouchableOpacity onPress={handleForgotPassword}>
