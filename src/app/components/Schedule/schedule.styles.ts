@@ -24,6 +24,11 @@ export const scheduleCardStyles = (colors: Colors) =>
       ...typography.bodysm,
       color: colors.placeholder,
     },
+    subjectText: {
+      color: colors.textColor,
+      ...typography.bodylg,
+      fontWeight: "600",
+    },
     subtitle: {
       ...typography.bodylg,
       color: colors.textColor,

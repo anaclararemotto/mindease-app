@@ -4,4 +4,5 @@ export interface ScheduleProps {
   date: string;
   type: string;
   subject: string;
+  onDelete?: () => void;
 }

@@ -3,13 +3,14 @@ import { useTheme } from "@/src/shared/theme/ThemeContext";
 import {
   addDoc,
   collection,
+  deleteDoc,
+  doc,
   onSnapshot,
-  orderBy,
   query,
   where,
 } from "firebase/firestore";
 import {
-  AlarmClock, // Troquei o ChevronRight pelo Plus para ficar mais intuitivo
+  AlarmClock,
   Hourglass,
   LibraryBig,
   Newspaper,
@@ -21,6 +22,7 @@ import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
+  Platform,
   ScrollView,
   Text,
   TouchableOpacity,
@@ -42,21 +44,46 @@ export const ContentView = () => {
   const [loading, setLoading] = useState(true);
   const [modalVisible, setModalVisible] = useState(false);
 
-  // Função para salvar o novo evento no Firebase
   const handleSaveEvent = async (eventData: any) => {
     try {
       if (!user?.id) return;
+      const todayISO = new Date().toISOString().split("T")[0];
 
       await addDoc(collection(db, "schedules"), {
         ...eventData,
+        date: todayISO,
         userId: user.id,
         createdAt: new Date(),
       });
-
-      // O onSnapshot vai atualizar a lista automaticamente
     } catch (error) {
       console.error("Erro ao salvar evento:", error);
       Alert.alert("Erro", "Não foi possível salvar o evento.");
+    }
+  };
+
+  const handleDeleteSchedule = (id: string) => {
+    const performDelete = async () => {
+      try {
+        await deleteDoc(doc(db, "schedules", id));
+      } catch (error) {
+        console.error("Erro ao deletar:", error);
+      }
+    };
+
+    if (Platform.OS === "web") {
+      const confirmed = window.confirm(
+        "Tem certeza que deseja remover este item?",
+      );
+      if (confirmed) performDelete();
+    } else {
+      Alert.alert(
+        "Excluir Tarefa",
+        "Tem certeza que deseja remover este item?",
+        [
+          { text: "Cancelar", style: "cancel" },
+          { text: "Excluir", style: "destructive", onPress: performDelete },
+        ],
+      );
     }
   };
 
@@ -66,7 +93,6 @@ export const ContentView = () => {
     const q = query(
       collection(db, "schedules"),
       where("userId", "==", user.id),
-      orderBy("hour", "asc"),
     );
 
     const unsubscribe = onSnapshot(
@@ -76,7 +102,18 @@ export const ContentView = () => {
         querySnapshot.forEach((doc) => {
           items.push({ id: doc.id, ...doc.data() });
         });
-        setSchedules(items);
+
+        const sortedItems = items.sort((a, b) => {
+          const dateComparison = (a.date || "").localeCompare(b.date || "");
+
+          if (dateComparison === 0) {
+            return (a.hour || "").localeCompare(b.hour || "");
+          }
+
+          return dateComparison;
+        });
+
+        setSchedules(sortedItems);
         setLoading(false);
       },
       (error) => {
@@ -102,7 +139,6 @@ export const ContentView = () => {
             </Text>
           </View>
 
-          {/* Botão que abre a Modal */}
           <TouchableOpacity
             onPress={() => setModalVisible(true)}
             style={{
@@ -132,6 +168,7 @@ export const ContentView = () => {
                   date={item.date}
                   type={item.type}
                   subject={item.subject}
+                  onDelete={() => handleDeleteSchedule(item.id)}
                 />
               ))
             ) : (
@@ -176,12 +213,11 @@ export const ContentView = () => {
         />
       </View>
 
-      {/* Componente da Modal */}
       <AddEventModal
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
         onSave={handleSaveEvent}
-        selectedDate={new Date().toLocaleDateString("pt-BR")}
+        selectedDate={new Date().toISOString().split("T")[0]}
       />
     </ScrollView>
   );
