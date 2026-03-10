@@ -1,7 +1,7 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Image } from "expo-image";
-import { useRouter } from "expo-router"; // Importando para navegação
+import { useRouter } from "expo-router";
 import { doc, getDoc } from "firebase/firestore";
 import { CalendarDays, Goal, LogOut } from "lucide-react-native";
 import { useEffect, useState } from "react";
@@ -17,7 +17,7 @@ export const DashboardView = () => {
   const styles = dashboardStyles(colors);
   const { user, logout } = useAuth();
   const [userName, setUserName] = useState("...");
-  const router = useRouter(); // Inicializando o roteador
+  const router = useRouter();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -43,7 +43,6 @@ export const DashboardView = () => {
 
   return (
     <View style={styles.container}>
-      {/* Cabeçalho Ajustado */}
       <View style={styles.header}>
         <View style={styles.containerText}>
           <Text style={styles.title}>Olá {userName}!</Text>

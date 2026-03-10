@@ -14,7 +14,7 @@ import { Input } from "../Input/input";
 
 type Props = {
   visible: boolean;
-  selectedDate?: string; // Tornamos opcional caso queira usar a data de hoje
+  selectedDate?: string;
   onClose: () => void;
   onSave: (event: any) => void;
 };
@@ -46,13 +46,11 @@ export const AddEventModal = ({
   }, [visible]);
 
   const handleSave = () => {
-    // Validação básica
     if (!name || !hour || !subject) {
       Alert.alert("Atenção", "Preencha o nome, hora e matéria.");
       return;
     }
 
-    // Normaliza a prioridade para o padrão que usamos no ScheduleCard
     let priorityValue = "low";
     const p = priority.toLowerCase();
     if (p.includes("alt") || p === "high") priorityValue = "high";
@@ -76,7 +74,7 @@ export const AddEventModal = ({
       <View
         style={{
           flex: 1,
-          backgroundColor: "rgba(0,0,0,0.6)", // Escureci um pouco mais para dar foco
+          backgroundColor: "rgba(0,0,0,0.6)",
           justifyContent: "center",
           padding: 20,
         }}
@@ -88,7 +86,7 @@ export const AddEventModal = ({
             padding: 20,
             maxHeight: "85%",
             borderWidth: 1,
-            borderColor: colors.brandAlternative + "30", // Borda sutil
+            borderColor: colors.brandAlternative + "30",
           }}
         >
           <ScrollView showsVerticalScrollIndicator={false}>

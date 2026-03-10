@@ -5,10 +5,10 @@ import { StyleSheet } from "react-native";
 export const dashboardStyles = (colors: Colors) =>
   StyleSheet.create({
     container: {
-      flex: 1, // Melhor que height: "100%" para evitar cortes em telas menores
+      flex: 1,
       backgroundColor: colors.background,
       paddingHorizontal: 30,
-      paddingTop: 60, // Ajustado para não colar no topo do iPhone/Android
+      paddingTop: 60,
       paddingBottom: 20,
       alignItems: "center",
       gap: 20,
@@ -22,7 +22,7 @@ export const dashboardStyles = (colors: Colors) =>
     },
     containerText: {
       gap: 5,
-      flex: 1, // Garante que o texto não empurre o botão de logout para fora
+      flex: 1,
     },
     title: {
       ...typography.headingmd,

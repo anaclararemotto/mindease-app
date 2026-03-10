@@ -1,58 +1,11 @@
-// import { useTheme } from "@/src/shared/theme/ThemeContext";
-// import { Link } from "expo-router";
-// import { ChevronLeft } from "lucide-react";
-// import { Text, View } from "react-native";
-// import { Button } from "../../components/Button/button";
-// import { Input } from "../../components/Input/input";
-// import { signupStyles } from "./signup.styles";
-
-// export const SignupView = () => {
-//   const { colors } = useTheme();
-//   const styles = signupStyles(colors);
-
-//   return (
-//     <View style={styles.container}>
-//       <Link href={"/(auth)/login"}>
-//         <ChevronLeft color={colors.colorPrimary} />
-//       </Link>
-//       <View style={styles.containerContent}>
-//         <View style={styles.containerTitle}>
-//           <Text style={styles.title}>Criar uma conta</Text>
-//           <Text style={styles.subtitle}>
-//             Estudar hoje é conquistar o amanhã.
-//           </Text>
-//         </View>
-//         <View style={styles.inputContainer}>
-//           <Input placeholder="Digite seu nome" type="text"></Input>
-//           <Input
-//             placeholder="Digite sua data de nascimento"
-//             type="date"
-//           ></Input>
-//           <Input placeholder="Digite seu email" type="email"></Input>
-//           <Input placeholder="Digite sua senha" type="password"></Input>
-//         </View>
-
-//         <Button title="Cadastrar" />
-
-//         <Text style={styles.text}>
-//           Já possui uma conta?{" "}
-//           <Link href={"/(auth)/login"} style={styles.link}>
-//             Login
-//           </Link>
-//         </Text>
-//       </View>
-//     </View>
-//   );
-// };
-
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Link, useRouter } from "expo-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore"; // Importações para o Firestore
+import { doc, setDoc } from "firebase/firestore";
 import { ChevronLeft } from "lucide-react-native";
 import React, { useState } from "react";
 import { Alert, Text, View } from "react-native";
-import { auth, db } from "../../../services/firebaseConfig"; // Importação do db (Firestore)
+import { auth, db } from "../../../services/firebaseConfig";
 import { Button } from "../../components/Button/button";
 import { Input } from "../../components/Input/input";
 import { signupStyles } from "./signup.styles";
@@ -76,7 +29,6 @@ export const SignupView = () => {
 
     setLoading(true);
     try {
-      // 1. Cria o usuário no Authentication
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -84,7 +36,6 @@ export const SignupView = () => {
       );
       const user = userCredential.user;
 
-      // 2. Salva os dados adicionais no Firestore usando o UID do usuário
       await setDoc(doc(db, "users", user.uid), {
         name: name,
         birthDate: birthDate,
