@@ -1,4 +1,5 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
+import { db } from "@/src/services/firebaseConfig";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import {
   addDoc,
@@ -28,7 +29,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { db } from "../../../services/firebaseConfig";
 
 import { AddEventModal } from "../../components/AddEventModal/addeventmodal";
 import { ContentCard } from "../../components/ContentCard/contentcard";

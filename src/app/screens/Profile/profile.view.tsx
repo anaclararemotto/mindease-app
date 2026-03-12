@@ -1,10 +1,10 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
+import { db } from "@/src/services/firebaseConfig";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { doc, getDoc } from "firebase/firestore";
 import { Download, Goal, History, LogOut, Wrench } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import { ScrollView, View } from "react-native";
-import { db } from "../../../services/firebaseConfig";
 import { InfoCard } from "../../components/InfoCard/infocard";
 import { OptionCard } from "../../components/OptionCard/optioncard";
 import { ProfileCard } from "../../components/ProfileCard/profilecard";

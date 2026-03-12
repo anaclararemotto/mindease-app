@@ -1,3 +1,4 @@
+import { auth, db } from "@/src/services/firebaseConfig";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Link, useRouter } from "expo-router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -5,7 +6,6 @@ import { doc, setDoc } from "firebase/firestore";
 import { ChevronLeft } from "lucide-react-native";
 import React, { useState } from "react";
 import { Alert, Text, View } from "react-native";
-import { auth, db } from "../../../services/firebaseConfig";
 import { Button } from "../../components/Button/button";
 import { Input } from "../../components/Input/input";
 import { signupStyles } from "./signup.styles";

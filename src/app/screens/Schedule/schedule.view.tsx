@@ -1,4 +1,5 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
+import { db } from "@/src/services/firebaseConfig";
 import {
   addDoc,
   collection,
@@ -10,7 +11,6 @@ import {
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Alert, Platform, View } from "react-native";
-import { db } from "../../../services/firebaseConfig";
 
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { AddEventModal } from "../../components/AddEventModal/addeventmodal";

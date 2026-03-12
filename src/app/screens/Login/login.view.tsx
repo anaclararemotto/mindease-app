@@ -1,3 +1,4 @@
+import { auth } from "@/src/services/firebaseConfig";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Link, useRouter } from "expo-router";
 import {
@@ -15,7 +16,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { auth } from "../../../services/firebaseConfig";
 import { Button } from "../../components/Button/button";
 import { Input } from "../../components/Input/input";
 import { loginStyles } from "./login.styles";

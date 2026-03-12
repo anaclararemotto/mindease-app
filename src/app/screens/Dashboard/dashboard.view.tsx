@@ -1,4 +1,5 @@
 import { useAuth } from "@/src/app/contexts/AuthContext";
+import { db } from "@/src/services/firebaseConfig";
 import { useTheme } from "@/src/shared/theme/ThemeContext";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
@@ -6,7 +7,6 @@ import { doc, getDoc } from "firebase/firestore";
 import { CalendarDays, Goal, LogOut } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import { db } from "../../../services/firebaseConfig";
 import { OptionCard } from "../../components/OptionCard/optioncard";
 import { dashboardStyles } from "./dashboard.styles";
 
