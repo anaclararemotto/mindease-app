@@ -1,53 +1,49 @@
+🧠 MindEase - Gestão Cognitiva Acessível
+O MindEase é uma plataforma desenvolvida para auxiliar pessoas com neurodivergências (TDAH, TEA e Dislexia) na organização de suas rotinas. O foco principal é a redução da carga cognitiva através de uma interface previsível, limpa e funcional.
 
-# 📱 MindEase App
+🚀 O Projeto
+Este projeto é o trabalho de conclusão da pós-graduação na FIAP, com foco em acessibilidade e experiência do usuário (UX).
 
-O MindEase é uma plataforma de estudos focada em acessibilidade cognitiva e emocional. Ela foi criada para estudantes que enfrentam desafios como TDAH, TEA, dislexia, ansiedade, burnout, dificuldades de foco e sobrecarga sensorial.
+Principais Funcionalidades:
+Cronograma Visual: Planejamento de tarefas com interface simplificada.
 
-Diferente de plataformas tradicionais, o MindEase prioriza a **simplicidade, previsibilidade visual e personalização**, reduzindo estímulos desnecessários e respeitando diferentes ritmos de aprendizagem.
+Sincronização em Tempo Real: Dados salvos no Firebase para acesso multiplataforma.
 
-A proposta central é transformar o estudo em uma experiência mais leve, organizada e possível de sustentar no dia a dia.
+Design Inclusivo: Cores, fontes e espaçamentos pensados para evitar a sobrecarga sensorial.
 
-## 🎯 Objetivos
-- Apoiar a constância sem pressão.
-- Reduzir o atrito cognitivo.
-- Facilitar o retorno ao foco.
+🛠️ Tecnologias Utilizadas
+Front-end: React Native / Expo (Web & Mobile)
 
-## 🎨 Diretrizes de UI/UX
-- Layout limpo e espaçado.
-- Tipografia legível.
-- Feedback visual claro.
-- Navegação simples.
+Estilização: SCSS (Sass)
 
-## 🖥️ Principais funcionalidades
-- Desafios diários para incentivar a constância.
-- Conteúdos educacionais em vídeo e e-book.
-- Flashcards para reforço de memória.
-- To-do list para organização de tarefas.
-- Páginas de anotações vinculadas às aulas.
-- Newsletter com lembretes e conteudos sobre a atualidade.
-- Personalização de cores e temas.
-- Organização de matérias por categorias.
+Backend & Auth: Firebase (Firestore & Authentication)
 
-## 🛠️ Stack
-- React Native
-- TypeScript
-- SCSS
-- Lucide Icons
-- Design System próprio
-- Firebase
+CI/CD & Hosting: GitHub Actions & Firebase Hosting
 
-## 🔐 Autenticação
--
+⚙️ Configuração para Desenvolvimento
+Se desejar rodar o projeto localmente:
 
-## ⚙️ Variáveis de ambiente
-- Crie um arquivo .env
-- Adicione as variáveis de ambiente enviadas por .txt
+Clone o repositório:
 
-## ▶️ Instalação e execução
+Bash
+git clone https://github.com/anaclararemotto/mindease-app.git
+Instale as dependências:
 
-```
+Bash
 npm install
-npm start
-```
+Configure as variáveis de ambiente:
+Crie um arquivo .env na raiz e adicione suas chaves do Firebase.
 
+Inicie o projeto:
 
+Bash
+npx expo start
+
+🤖 CI/CD e Deploy
+O projeto utiliza GitHub Actions para automação. Cada push para a branch principal dispara uma esteira de:
+
+Instalação de dependências.
+
+Build de produção (Expo Export).
+
+Deploy automático para o Firebase Hosting.
