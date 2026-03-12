@@ -2,11 +2,11 @@ import {
   Stack,
   useRootNavigationState,
   useRouter,
-  useSegments
-} from 'expo-router';
-import { useEffect } from 'react';
-import { ActivityIndicator, View } from 'react-native';
-import { useAuth } from '../contexts/AuthContext';
+  useSegments,
+} from "expo-router";
+import { useEffect } from "react";
+import { ActivityIndicator, View } from "react-native";
+import { useAuth } from "../contexts/AuthContext";
 
 export default function AppLayout() {
   const { isAuthenticated, loading } = useAuth();
@@ -19,29 +19,31 @@ export default function AppLayout() {
 
     if (loading) return;
 
-    const inTabsGroup = segments[0] === '(tabs)';
-    const inAuthGroup = segments[0] === '(auth)';
+    const inTabsGroup = segments[0] === "(tabs)";
+    const inAuthGroup = segments[0] === "(auth)";
 
     if (!isAuthenticated && inTabsGroup) {
-      router.replace('/(auth)/login');
+      router.replace("/(auth)/login");
     }
 
     if (isAuthenticated && inAuthGroup) {
-      router.replace('/(tabs)/home');
+      router.replace("/(tabs)/dashboard");
     }
   }, [isAuthenticated, loading, navigationState]);
 
   if (loading || !navigationState?.key) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <ActivityIndicator />
       </View>
     );
   }
 
-  return <Stack
-          screenOptions={{
-            headerShown: false,
-          }}
-        />;
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    />
+  );
 }
