@@ -6,8 +6,8 @@ import {
   useState,
 } from "react";
 
-import { auth } from "@/src/services/firebaseConfig";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../../services/firebaseConfig";
 
 type User = {
   id: string;
