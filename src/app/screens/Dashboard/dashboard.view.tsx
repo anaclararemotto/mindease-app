@@ -75,7 +75,7 @@ export const DashboardView = () => {
         <OptionCard
           label="Desafio de hoje"
           icon={Goal}
-          onPress={() => router.push("/(tabs)/profile" as any)}
+          onPress={() => router.push("/challenge" as any)}
         />
       </View>
     </View>
